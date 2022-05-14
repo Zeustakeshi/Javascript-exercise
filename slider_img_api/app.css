@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* css app */
+:root {
+    --primary-color: skyblue;
+}
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 440px;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 60px;
+}
+.slider-img {
+    width: 300px;
+    height: 300px;
+    object-fit: content;
+}
+
+.slick-dots {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+}
+.slick-dots li {
+    list-style: none;
+    margin-left: 15px;
+}
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    outline: none;
+    background-color: #dde0e4;
+    border: none;
+    border-radius: 1000px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.slick-active button {
+    background-color: var(--primary-color);
+}
+
+.slick-btn {
+    position: absolute;
+    top: 50%;
+    padding: 8px;
+    line-height: 1;
+    border-radius: 1000px;
+    outline: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    z-index: 1;
+    background-color: rgba(238, 238, 238, 0.301);
+    color: rgba(0, 0, 0, 0.603);
+    cursor: pointer;
+}
+
+.slick-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.slick-prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.slick-next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.btn-random-slider {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    background-color: var(--primary-color);
+    width: 100%;
+    max-width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    color: rgba(17, 13, 13, 0.863);
+}
+
+.btn-random-slider:hover {
+    color: rgb(255, 244, 244);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.loader {
+    display: none;
+}
+
+.slider-container.is-loading .slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.slider-container.is-loading > .loader {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.slider-container.is-loading .btn-random-slider > span {
+    display: none;
+}
+.slider-container.is-loading .btn-random-slider > .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.slider-container.is-loading .btn-random-slider {
+    opacity: 0.8;
+    pointer-events: none;
+}

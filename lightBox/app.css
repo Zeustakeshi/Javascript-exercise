@@ -1,0 +1,66 @@
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light-box-content {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:40px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.light-box-control {
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+
+.light-box-control ion-icon {
+    pointer-events: none;
+}
+
+.light-box-control:hover {
+    background-color: rgba(89, 89, 89, 0.6);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.light-box-content img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.content-img {
+    max-width: 200px;
+    cursor:zoom-in;
+}
+
+.content p {
+    max-width: 500px;
+}

@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+}
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 350px;
+    margin: 25px auto;
+    border-radius: 40px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 15px 25px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-right: 20px;
+    color: #333;
+}
+
+.input-wrapper.valid {
+    border: 2px solid #20e3b2;
+}
+
+.input-wrapper.invalid {
+    border: 2px solid #fc5776;
+}
+
+.input-icons {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-100%);
+    font-size: 25px;
+}
+
+.input-icons ion-icon {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+}
+
+.input-wrapper.invalid .icon-wrong,
+.input-wrapper.valid .icon-correct {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.input-wrapper.valid .icon-wrong,
+.input-wrapper.invalid .icon-correct {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.icon-correct {
+    color: #20e3b2;
+}
+
+.icon-wrong {
+    color: #fc5776;
+}

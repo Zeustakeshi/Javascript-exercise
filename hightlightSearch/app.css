@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.search-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
+
+.input-search {
+    padding: 5px 20px;
+    font-size: 25px;
+    color: #000000;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input-search::placeholder {
+    color: #ccc;
+}
+
+.dropdown {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.primary {
+    color: #20e3b2;
+    font-weight: bold;
+}
